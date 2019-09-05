@@ -1,0 +1,25 @@
+{
+  "name": "typescript-data-structures",
+  "version": "1.0.0",
+  "description": "TypeScript Data Structures",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "start": "tsc; node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digi0ps/typescript-data-structures.git"
+  },
+  "author": "digi0ps",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/digi0ps/typescript-data-structures/issues"
+  },
+  "homepage": "https://github.com/digi0ps/typescript-data-structures#readme",
+  "devDependencies": {
+    "typescript": "^3.6.2"
+  }
+}
