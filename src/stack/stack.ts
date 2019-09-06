@@ -9,6 +9,10 @@ class Stack<T> extends AbstractStack<T> {
     this.items = []
   }
 
+  isEmpty() {
+    return !this.items.length
+  }
+
   push(item: T) {
     this.items.push(item)
   }

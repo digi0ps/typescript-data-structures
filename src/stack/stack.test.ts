@@ -7,6 +7,10 @@ describe("Testing Stack implemented using Array", () => {
     expect(stack.items).toStrictEqual([])
   })
 
+  it("Check if is Empty", () => {
+    expect(stack.isEmpty()).toBe(true)
+  })
+
   it("Push a new element", () => {
     stack.push(1)
     expect(stack.items).toStrictEqual([1])

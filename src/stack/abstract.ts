@@ -4,6 +4,7 @@ abstract class AbstractStack<Type> {
 
   constructor() {}
 
+  abstract isEmpty(): boolean
   abstract push(item: Type): void
   abstract pop(): Type
   abstract print(): void
