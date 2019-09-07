@@ -2,11 +2,12 @@ import AbstractStack from "./abstract"
 
 class Stack<T> extends AbstractStack<T> {
   items: Array<T>
-  top: T
+  top: number
 
   constructor() {
     super()
     this.items = []
+    this.top = -1
   }
 
   isEmpty() {
@@ -14,11 +15,17 @@ class Stack<T> extends AbstractStack<T> {
   }
 
   push(item: T) {
-    this.items.push(item)
+    this.top = this.top + 1
+    this.items[this.top] = item
   }
 
   pop() {
-    return this.items.pop()
+    const item = this.items[this.top]
+
+    delete this.items[this.top]
+    this.top = this.top - 1
+
+    return item
   }
 
   print() {

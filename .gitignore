@@ -1,7 +1,7 @@
 # Dist
 dist/
 .vscode/
-coveralls/
+coverage/
 
 # Logs
 logs

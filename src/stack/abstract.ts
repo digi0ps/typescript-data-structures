@@ -1,6 +1,6 @@
 abstract class AbstractStack<Type> {
   items: Array<Type>
-  top: Type
+  top: number
 
   constructor() {}
 
