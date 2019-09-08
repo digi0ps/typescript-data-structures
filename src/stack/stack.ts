@@ -1,9 +1,6 @@
 import AbstractStack from "./abstract"
 
 class Stack<T> extends AbstractStack<T> {
-  items: Array<T>
-  top: number
-
   constructor() {
     super()
     this.items = []
