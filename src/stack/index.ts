@@ -26,7 +26,12 @@ class Stack<T> extends AbstractStack<T> {
   }
 
   print() {
-    const messages = ["TOP", ...this.items, "BOTTOM"]
+    // TODO: Mock console messages
+    const messages: any[] = ["TOP"]
+    for (let i = this.top; i > -1; i--) {
+      messages.push(this.items[i])
+    }
+    messages.push("BOTTOM")
     console.log(messages.join(" -> "))
   }
 }

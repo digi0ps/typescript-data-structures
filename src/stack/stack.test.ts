@@ -1,4 +1,4 @@
-import Stack from "./stack"
+import Stack from "."
 
 describe("Testing Stack implemented using Array", () => {
   const stack = new Stack<number>()
@@ -30,5 +30,16 @@ describe("Testing Stack implemented using Array", () => {
     const popped = stack.pop()
     expect(popped).toBe(3)
     expect(stack.top).toBe(1)
+  })
+
+  it("Print queue elements", () => {
+    // Mock console.log
+    const spy = jest.spyOn(console, "log").mockImplementation(() => {})
+    stack.print()
+
+    const { calls } = spy.mock
+    expect(calls.length).toBe(1)
+    expect(calls[0][0]).toBe("TOP -> 2 -> 1 -> BOTTOM")
+    spy.mockRestore()
   })
 })

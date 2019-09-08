@@ -1,4 +1,4 @@
-import Queue from "./"
+import Queue from "."
 
 describe("Testing Queue implemented using Array", () => {
   const queue = new Queue<string>()
@@ -11,6 +11,14 @@ describe("Testing Queue implemented using Array", () => {
 
   it("Check if queue is Empty", () => {
     expect(queue.isEmpty()).toBe(true)
+  })
+
+  it("Dequeueing empty queue", () => {
+    try {
+      queue.dequeue()
+    } catch (error) {
+      expect(error.message).toBe("Underflow")
+    }
   })
 
   it("Enqueue a new element", () => {
@@ -31,5 +39,12 @@ describe("Testing Queue implemented using Array", () => {
     expect(deleted).toBe("Alpha")
     expect(queue.head).toBe(1)
     expect(queue.tail).toBe(2)
+  })
+
+  it("Print queue elements", () => {
+    // Mock console.log
+    const spy = jest.spyOn(console, "log").mockImplementation(() => {})
+    queue.print()
+    expect(spy.mock.calls.length).toBe(queue.items.filter(x => x).length)
   })
 })

@@ -19,7 +19,7 @@ class Queue<T> extends AbstractQueue<T> {
 
   dequeue() {
     if (this.isEmpty()) {
-      throw "Underflow: Queue is empty"
+      throw new Error("Underflow")
     }
 
     const deleted = this.items[this.head]
@@ -30,6 +30,7 @@ class Queue<T> extends AbstractQueue<T> {
   }
 
   print() {
+    // TODO: Mock console messages
     const { head, tail, items } = this
     for (let i = head; i < tail; i++) {
       console.log(items[i])
