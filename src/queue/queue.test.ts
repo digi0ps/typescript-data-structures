@@ -44,7 +44,10 @@ describe("Testing Queue implemented using Array", () => {
   it("Print queue elements", () => {
     // Mock console.log
     const spy = jest.spyOn(console, "log").mockImplementation(() => {})
+
     queue.print()
-    expect(spy.mock.calls.length).toBe(queue.items.filter(x => x).length)
+    expect(spy).toHaveBeenCalledTimes(queue.items.filter(x => x).length)
+
+    spy.mockRestore()
   })
 })

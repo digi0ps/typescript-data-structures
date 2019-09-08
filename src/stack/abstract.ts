@@ -1,6 +1,7 @@
 abstract class AbstractStack<Type> {
   items: Array<Type>
   top: number
+  size?: number
 
   constructor() {}
 
