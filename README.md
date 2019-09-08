@@ -12,7 +12,7 @@
 - [x] Queue using Array
   - [ ] Queue with size _n_
   - [ ] Circular queue
-- [ ] Linked List
+- [x] Linked List
 - [ ] Stack using Linked List
 - [ ] Queue using Linked List
 - [ ] Tree
