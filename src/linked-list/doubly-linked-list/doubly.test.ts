@@ -1,7 +1,7 @@
 import Node from "../node"
 import DoublyLinkedList from "."
 
-describe("Testing Singly Linked List", () => {
+describe("Testing Doubly Linked List", () => {
   const dll = new DoublyLinkedList<number>()
   const node1 = new Node(1)
   const node2 = new Node(2)

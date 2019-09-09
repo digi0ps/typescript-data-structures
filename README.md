@@ -14,8 +14,8 @@
   - [ ] Circular queue
 - [ ] Linked List
   - [x] Singly Linked List
-  - [ ] Doubly Linked List
-  - [ ] Circular Linked List
+  - [x] Doubly Linked List
+  - [x] Circular Linked List
   - [ ] Stack using Linked List
   - [ ] Queue using Linked List
 - [ ] Tree
