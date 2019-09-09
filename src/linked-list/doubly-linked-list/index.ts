@@ -32,6 +32,12 @@ class DoublyLinkedList<T> extends Abstract<T> {
 
   private insertInBetween(previousValue: T, newNode: Node<T>) {
     const previousNode = this.search(previousValue)
+
+    if (!previousNode) {
+      throw new Error("Node Not Found")
+    }
+
+    // TODO: Handle the case of previousNode == Head | Tail
     newNode.next = previousNode.next
     newNode.prev = previousNode
 
@@ -45,6 +51,7 @@ class DoublyLinkedList<T> extends Abstract<T> {
 
     if (this.isEmpty()) {
       this.setHeadAndTail(node)
+      return
     }
 
     if (mode === "start") {
@@ -65,11 +72,23 @@ class DoublyLinkedList<T> extends Abstract<T> {
       }
       current = current.next
     }
+
+    return null
   }
 
   delete(node: Node<T>) {
-    node.prev.next = node.next
-    node.next.prev = node.prev
+    // If node is head, prev is NULL
+    if (this.head === node) {
+      this.head = node.next
+    } else {
+      node.prev.next = node.next
+    }
+    // If node is tail, next is NULL
+    if (this.tail === node) {
+      this.tail = node.prev
+    } else {
+      node.next.prev = node.prev
+    }
   }
 }
 

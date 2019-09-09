@@ -30,7 +30,6 @@ class Queue<T> extends AbstractQueue<T> {
   }
 
   print() {
-    // TODO: Mock console messages
     const { head, tail, items } = this
     for (let i = head; i < tail; i++) {
       console.log(items[i])
