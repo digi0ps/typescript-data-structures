@@ -16,8 +16,8 @@
   - [x] Singly Linked List
   - [x] Doubly Linked List
   - [x] Circular Linked List
-  - [ ] Stack using Linked List
-  - [ ] Queue using Linked List
+  - [x] Stack using Linked List
+  - [x] Queue using Linked List
 - [ ] Tree
   - [ ] Binary Tree
 - [ ] Hash Map
