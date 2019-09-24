@@ -60,6 +60,8 @@ class DoublyLinkedList<T> extends Abstract<T> {
       this.insertAtEnd(node)
     } else if (mode === "between" && previous) {
       this.insertInBetween(previous, node)
+    } else {
+      throw new Error("Invalid Arguments.")
     }
   }
 

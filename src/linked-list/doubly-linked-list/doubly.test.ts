@@ -61,6 +61,14 @@ describe("Testing Doubly Linked List", () => {
     }
   })
 
+  test("Calling insert with wrong arguments", () => {
+    try {
+      dll.insert(new Node(10), { mode: "between" })
+    } catch ({ message }) {
+      expect(message).toBe("Invalid Arguments.")
+    }
+  })
+
   test("Search using data", () => {
     const resultNode = dll.search(2)
 

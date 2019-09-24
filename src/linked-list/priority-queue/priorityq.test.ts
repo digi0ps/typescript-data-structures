@@ -2,13 +2,14 @@ import PriorityQueue from "."
 import Node from "../node"
 
 describe("Testing Prioirty Queue", () => {
-  const queue = new PriorityQueue<number>()
+  const queue = new PriorityQueue<number>(3)
   const node1 = new Node(1)
   const node2 = new Node(2)
   const node3 = new Node(3)
 
   it("Queue is initalized", () => {
     expect(queue.head).toBeNull()
+    expect(queue.size).toBe(3)
   })
 
   it("Check if queue is Empty", () => {
@@ -46,6 +47,14 @@ describe("Testing Prioirty Queue", () => {
 
   it("Lenght of queue", () => {
     expect(queue.length).toBe(3)
+  })
+
+  it("Overflow", () => {
+    try {
+      queue.enqueue(new Node(4))
+    } catch ({ message }) {
+      expect(message).toBe("Overflow")
+    }
   })
 
   it("Dequeue an element", () => {
