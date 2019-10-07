@@ -1,10 +1,10 @@
 class Node<T> {
-  data: T
+  key: T
   left?: Node<T> = null
   right?: Node<T> = null
-
-  constructor(data: T) {
-    this.data = data
+  parent?: Node<T> = null
+  constructor(key: T) {
+    this.key = key
   }
 }
 
