@@ -30,6 +30,8 @@ class BinarySearchTree<T> extends BST<T> {
     } else {
       previous.right = node
     }
+
+    node.parent = previous
   }
 
   search(key: T): Node<T> {
@@ -84,6 +86,38 @@ class BinarySearchTree<T> extends BST<T> {
     }
 
     return current.key
+  }
+
+  successor(node: Node<T>): Node<T> {
+    if (node.right) {
+      return this.search(this.minimum(node.right))
+    }
+
+    let parent = node.parent
+    let current = node
+
+    while (parent && parent.right === current) {
+      current = parent
+      parent = parent.parent
+    }
+
+    return parent
+  }
+
+  predecessor(node: Node<T>): Node<T> {
+    if (node.left) {
+      return this.search(this.maximum(node.left))
+    }
+
+    let parent = node.parent
+    let current = node
+
+    while (parent && parent.left === current) {
+      current = parent
+      parent = parent.parent
+    }
+
+    return parent
   }
 }
 
