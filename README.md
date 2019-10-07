@@ -20,7 +20,7 @@
   - [x] Priority Queue using Linked List
 - Tree
   - [ ] Binary Tree
-  - [ ] Binary Search Tree
+  - [x] Binary Search Tree
 - Heap
   - [ ] Min Heap
   - [ ] Max Heap
