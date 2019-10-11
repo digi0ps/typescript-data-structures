@@ -119,6 +119,21 @@ class BinarySearchTree<T> extends BST<T> {
 
     return parent
   }
+
+  height(node: Node<T>): number {
+    if (node === null) {
+      return 0
+    }
+
+    const leftHeight = this.height(node.left)
+    const rightHeight = this.height(node.right)
+
+    if (leftHeight >= rightHeight) {
+      return leftHeight + 1
+    } else {
+      return rightHeight + 1
+    }
+  }
 }
 
 export default BinarySearchTree

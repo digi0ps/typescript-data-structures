@@ -8,6 +8,7 @@ describe("Testing Binary Search Tree", () => {
   const node4 = new Node(8)
   const node5 = new Node(1)
   const node6 = new Node(6)
+  const node7 = new Node(9)
 
   const bst = new BST<number>()
 
@@ -81,5 +82,16 @@ describe("Testing Binary Search Tree", () => {
     expect(bst.predecessor(node6)).toBe(node1)
     // 1 -> null
     expect(bst.predecessor(node5)).toBeNull()
+  })
+
+  test("Height", () => {
+    expect(bst.height(null)).toBe(0)
+
+    expect(bst.height(bst.root)).toBe(3)
+
+    bst.insert(node7)
+    expect(bst.height(bst.root)).toBe(4)
+
+    expect(bst.height(node5)).toBe(1)
   })
 })
