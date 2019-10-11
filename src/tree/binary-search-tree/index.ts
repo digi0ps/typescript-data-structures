@@ -1,10 +1,10 @@
 import Node from "../node"
+import BinaryTree from "../binary-tree"
 import BST from "./abstract"
 
-class BinarySearchTree<T> extends BST<T> {
+class BinarySearchTree<T> extends BinaryTree<T> implements BST<T> {
   constructor() {
     super()
-    this.root = null
   }
 
   insert(node: Node<T>) {
@@ -48,16 +48,6 @@ class BinarySearchTree<T> extends BST<T> {
     }
 
     return null
-  }
-
-  inorder(node: Node<T>) {
-    if (node === null) {
-      return
-    }
-
-    this.inorder(node.left)
-    console.log(node.key)
-    this.inorder(node.right)
   }
 
   minimum(node: Node<T>) {
