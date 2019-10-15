@@ -7,18 +7,20 @@
 
 ### Contents
 
-- [x] Stack using Array
-  - [x] Stack with size _n_
-- [x] Queue using Array
-  - [ ] Queue with size _n_
-  - [ ] Circular queue
-- [ ] Linked List
+- Array
+  - [x] Stack using Array
+  - [x] Queue using Array
+  - [ ] Circular Queue
+- Linked List
   - [x] Singly Linked List
   - [x] Doubly Linked List
   - [x] Circular Linked List
   - [x] Stack using Linked List
   - [x] Queue using Linked List
-- [ ] Tree
+  - [x] Priority Queue using Linked List
+- Tree
   - [ ] Binary Tree
-- [ ] Hash Map
-- [ ] Heaps
+  - [x] Binary Search Tree
+- Heap
+  - [ ] Min Heap
+  - [ ] Max Heap
